@@ -38,7 +38,7 @@ export default class Generate extends SfdxCommand {
 
     public async run(): Promise<any> {
         if (!this.args.file) {
-            throw new SfdxError(messages.getMessage('errorParamNotFound'));
+            throw new SfdxError(messages.getMessage('outdirFlagDescription'));
         }
 
         if (!this.flags.nospinner) this.ux.startSpinner('Retrieving the process metadata');
